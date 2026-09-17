@@ -1,0 +1,720 @@
+
+@media (max-width: 1199px) {
+
+    .home .container header nav ul li {
+        margin: 10px;
+        font-size: 19px;
+    }
+
+    .trainers .container .trainer .item {
+        width: calc(33.333% - 20px);
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    /* ---------- Header / Burger Nav ---------- */
+    .home .container header nav .burger {
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        width: 46px;
+        height: 42px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        padding: 4px 6px;
+        z-index: 3;
+    }
+    .home .container header nav .burger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+    }
+    .home .container header nav .burger:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(229, 85, 86, 0.5);
+    }
+
+    .home .container header nav ul {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        margin-top: 10px;
+        background-color: rgba(0, 0, 0, 0.95);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        max-width: 420px;
+        min-width: 260px;
+        border-radius: 10px;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        z-index: 10;
+        transition: height 0.4s ease, padding 0.4s ease;
+    }
+    .home .container header nav .burger:focus ~ ul {
+        height: 420px;
+        padding: 10px 0;
+    }
+    .home .container header nav ul li {
+        margin: 0;
+        font-size: 18px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .home .container header nav ul li:last-child {
+        border-bottom: none;
+    }
+    .home .container header nav ul li a {
+        display: block;
+        padding: 14px 20px;
+    }
+
+    /* ---------- Hero ---------- */
+    .home .container .content {
+        left: 6%;
+        top: 28%;
+    }
+
+    /* ---------- About ---------- */
+    .about .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .about .container .content {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        order: 1;
+    }
+    .about .container .photo {
+        width: 100%;
+        max-width: 420px;
+        order: 2;
+    }
+    .about .container .photo img {
+        position: static;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* ---------- Services ---------- */
+    .services .container .service {
+        gap: 20px;
+    }
+    .services .container .service:nth-of-type(odd) {
+        flex-direction: row;
+    }
+ 
+
+    /* ---------- Clients ---------- */
+    .clients .container .client {
+        gap: 20px;
+    }
+    .clients .container .client .item {
+        width: calc(50% - 10px);
+    }
+
+    /* ---------- Trainers ---------- */
+    .trainers .container .trainer .item {
+        width: calc(50% - 15px);
+        max-width: 340px;
+    }
+
+    /* ---------- Gallery ---------- */
+    .gallary .container {
+        width: 92%;
+    }
+    .gallary .container .photos {
+        grid-template-columns: repeat(2, 1fr);
+        min-height: auto;
+    }
+    /* Rebuild masonry for 2 columns */
+    .gallary .container .photos .col1,
+    .gallary .container .photos .col2,
+    .gallary .container .photos .col3,
+    .gallary .container .photos .col4,
+    .gallary .container .photos .col5,
+    .gallary .container .photos .col6,
+    .gallary .container .photos .col7 {
+        grid-row: auto;
+        grid-column: auto;
+        grid-area: auto;
+        min-height: 260px;
+    }
+    /* Keep a couple of taller accent cells */
+    .gallary .container .photos .col1 {
+        grid-row: span 2;
+        min-height: 520px;
+    }
+    .gallary .container .photos .col4 {
+        grid-row: span 2;
+        min-height: 520px;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact .container .way {
+        gap: 25px;
+        padding: 30px 0;
+    }
+    .contact .container .way .item {
+        min-width: 180px;
+    }
+    .contact .container .info {
+        max-width: 720px;
+    }
+    .contact .container .info .in input {
+        flex-basis: calc(33.333% - 12px);
+        min-width: 180px;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+
+    /* ---------- Container padding ---------- */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* ---------- Hero ---------- */
+    .home .container {
+        padding: 0;
+    }
+    .home .container header {
+        padding: 15px;
+    }
+    .home .container .content {
+        left: 6%;
+        right: 6%;
+        max-width: none;
+        text-align: left;
+    }
+    .home .container .content h2 {
+        font-size: clamp(22px, 6vw, 32px);
+    }
+    .home .container .content h3 {
+        font-size: clamp(18px, 5vw, 26px);
+    }
+    .home .container .content button {
+        font-size: clamp(14px, 3vw, 16px);
+        padding: 10px 18px;
+    }
+
+    /* ---------- About ---------- */
+    .about .container {
+        padding: 30px 16px;
+    }
+
+    /* ---------- Services ---------- */
+    .services .container {
+        padding: 30px 16px;
+    }
+
+    .services .container .service .content {
+        width: 100%;
+        align-items: center;
+    }
+    .services .container .service .item {
+        width: auto;
+    }
+
+    /* ---------- Clients ---------- */
+    .clients .container {
+        padding: 0 16px 30px;
+    }
+    .clients .container .client {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .clients .container .client .item {
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+    .clients .container .client .item p {
+        padding: 15px 20px;
+    }
+
+    /* ---------- Trainers ---------- */
+    .trainers .container .trainer {
+        gap: 18px;
+    }
+    .trainers .container .trainer .item {
+        width: calc(50% - 10px);
+        max-width: 320px;
+        min-width: 0;
+    }
+    .trainers .container .trainer .item .photo {
+        width: min(100%, 170px);
+        max-height: 187px;
+    }
+
+    /* ---------- Gallery ---------- */
+    .gallary .container {
+        width: 94%;
+    }
+    .gallary .container .photos .col1,
+    .gallary .container .photos .col4 {
+        min-height: 400px;
+    }
+    .gallary .container .photos .col2,
+    .gallary .container .photos .col3,
+    .gallary .container .photos .col5,
+    .gallary .container .photos .col6,
+    .gallary .container .photos .col7 {
+        min-height: 220px;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact .container .way {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .contact .container .way .item {
+        width: 100%;
+        max-width: 320px;
+        min-width: 0;
+    }
+
+    .contact .container .info {
+        padding: 0 16px;
+    }
+    .contact .container .info .in {
+        flex-direction: column;
+        gap: 0;
+    }
+    .contact .container .info .in input {
+        flex-basis: auto;
+        width: 100%;
+        min-width: 0;
+    }
+    .contact .container .info textarea {
+        max-width: 100%;
+    }
+}
+
+
+/* ============================================
+   575px — Mobile
+   Gallery → single column, Trainers → 1 col,
+   Hero centered, Hide sidebar media,
+   Up button smaller
+   ============================================ */
+@media (max-width: 575px) {
+
+    .container {
+        padding: 0 14px;
+    }
+
+    /* ---------- Header ---------- */
+    .home .container header h1 {
+        font-size: clamp(20px, 6vw, 26px);
+    }
+    .home .container header nav .burger {
+        width: 40px;
+        height: 38px;
+        right: 10px;
+    }
+    .home .container header nav ul {
+        width: 92%;
+        min-width: 0;
+        margin-top: 6px;
+    }
+    .home .container header nav ul li a {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+    .home .container header nav .burger:focus ~ ul {
+        height: 380px;
+    }
+
+    /* ---------- Hero ---------- */
+    .home .container .content {
+        top: 26%;
+        left: 5%;
+        right: 5%;
+        text-align: center;
+    }
+    .home .container .content h2 {
+        margin-bottom: 16px;
+        line-height: 1.15;
+    }
+    .home .container .content h3 {
+        margin-bottom: 20px;
+    }
+
+    /* ---------- About ---------- */
+    .about .container {
+        padding: 24px 14px;
+        gap: 20px;
+    }
+    .about .container .content h2 {
+        font-size: clamp(22px, 6vw, 28px);
+    }
+
+    /* ---------- Services ---------- */
+    .services .container {
+        padding: 24px 14px;
+    }
+    .services .container h2 {
+        font-size: clamp(22px, 6vw, 30px);
+    }
+    .services .container .service {
+        margin: 14px 0;
+        gap: 14px;
+    }
+    .services .container .service .item .icon {
+        width: 70px;
+        height: 70px;
+    }
+    .services .container .service .item .icon i::before {
+        font-size: 28px;
+    }
+
+    /* ---------- Clients ---------- */
+    .clients .container {
+        margin: 16px auto;
+        padding: 0 14px 24px;
+    }
+    .clients .container h2 {
+        font-size: clamp(22px, 6vw, 30px);
+    }
+    .clients .container .client {
+        gap: 20px;
+    }
+    .clients .container .client .item {
+        width: 100%;
+    }
+
+    /* ---------- Trainers ---------- */
+    .trainers {
+        padding: 24px 0;
+    }
+    .trainers .container h2 {
+        font-size: clamp(22px, 6vw, 30px);
+        margin-bottom: 20px;
+    }
+    .trainers .container .trainer {
+        gap: 16px;
+    }
+    .trainers .container .trainer .item {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .trainers .container .trainer .item .photo {
+        width: min(100%, 180px);
+        max-height: 198px;
+    }
+
+    /* ---------- Gallery ---------- */
+    .gallary {
+        padding: 24px 0;
+    }
+    .gallary .container h2 {
+        font-size: clamp(22px, 6vw, 30px);
+        margin: 16px;
+    }
+    .gallary .container {
+        width: 94%;
+    }
+    .gallary .container .photos {
+        grid-template-columns: 1fr;
+    }
+    .gallary .container .photos .col1,
+    .gallary .container .photos .col2,
+    .gallary .container .photos .col3,
+    .gallary .container .photos .col4,
+    .gallary .container .photos .col5,
+    .gallary .container .photos .col6,
+    .gallary .container .photos .col7 {
+        grid-row: auto;
+        grid-column: auto;
+        grid-area: auto;
+        min-height: 220px;
+        height: 220px;
+    }
+    .gallary .container .photos .col1,
+    .gallary .container .photos .col4 {
+        min-height: 280px;
+        height: 280px;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact {
+        margin: 20px 0;
+    }
+    .contact .container h2 {
+        font-size: clamp(22px, 6vw, 30px);
+    }
+    .contact .container iframe {
+        height: 240px;
+    }
+    .contact .container .way {
+        padding: 20px 0;
+        gap: 22px;
+    }
+    .contact .container .way .item {
+        max-width: 100%;
+    }
+    .contact .container .way .item .icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 12px;
+    }
+    .contact .container .way .item h3 {
+        font-size: 15px;
+    }
+    .contact .container .info {
+        padding: 0 14px;
+    }
+    .contact .container .info .in input {
+        margin: 10px 0;
+        height: 40px;
+        font-size: 14px;
+    }
+    .contact .container .info textarea {
+        height: 140px;
+        font-size: 14px;
+    }
+
+    /* ---------- Scroll-up button ---------- */
+    .up {
+        width: 40px;
+        height: 40px;
+        right: 12px;
+        bottom: 12px;
+    }
+
+    /* ---------- Sidebar Social Media ---------- */
+    .media {
+        display: none;
+    }
+}
+
+
+/* ============================================
+   374px — Very Small Mobile
+   Final padding / font-size tweaks, ensure
+   nothing overflows
+   ============================================ */
+@media (max-width: 374px) {
+
+    .container {
+        padding: 0 12px;
+    }
+
+    /* ---------- Header ---------- */
+    .home .container header {
+        padding: 12px 10px;
+    }
+    .home .container header h1 {
+        font-size: 18px;
+    }
+    .home .container header nav .burger {
+        width: 36px;
+        height: 34px;
+        right: 8px;
+    }
+    .home .container header nav ul {
+        top: calc(100% + 2px);
+        width: 94%;
+    }
+    .home .container header nav ul li a {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    .home .container header nav .burger:focus ~ ul {
+        height: 340px;
+    }
+
+    /* ---------- Hero ---------- */
+    .home .container .content {
+        top: 24%;
+        left: 4%;
+        right: 4%;
+    }
+    .home .container .content h2 {
+        font-size: 20px;
+    }
+    .home .container .content h3 {
+        font-size: 17px;
+    }
+    .home .container .content button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    /* ---------- Generic section titles ---------- */
+    .about .container .content h2,
+    .services .container h2,
+    .clients .container h2,
+    .trainers .container h2,
+    .gallary .container h2,
+    .contact .container h2 {
+        font-size: 22px;
+    }
+
+    /* ---------- About ---------- */
+    .about .container {
+        padding: 20px 12px;
+        gap: 16px;
+    }
+    .about .container .content p {
+        font-size: 13px;
+    }
+
+    /* ---------- Services ---------- */
+    .services .container {
+        padding: 20px 12px;
+    }
+    .services .container .service .content h3 {
+        font-size: 18px;
+    }
+    .services .container .service .content p {
+        font-size: 13px;
+        margin: 12px 0;
+    }
+    .services .container .service .content button {
+        padding: 8px 12px;
+        font-size: 13px;
+        min-width: 90px;
+    }
+    .services .container .service .item .icon {
+        width: 60px;
+        height: 60px;
+    }
+    .services .container .service .item .icon i::before {
+        font-size: 24px;
+    }
+
+    /* ---------- Clients ---------- */
+    .clients .container {
+        padding: 0 12px 20px;
+        margin: 12px auto;
+    }
+    .clients .container .client .item p {
+        font-size: 12px;
+        padding: 12px 8px;
+    }
+    .clients .container .client .item h3 {
+        font-size: 14px;
+    }
+    .clients .container .client .item .photo {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* ---------- Trainers ---------- */
+    .trainers {
+        padding: 20px 0;
+    }
+    .trainers .container .trainer .item {
+        padding: 10px 8px;
+        width: 100%;
+        max-width: 320px;
+    }
+    .trainers .container .trainer .item .photo {
+        width: min(100%, 150px);
+        max-height: 165px;
+        margin: 12px auto;
+    }
+    .trainers .container .trainer .item h3 {
+        font-size: 16px;
+    }
+    .trainers .container .trainer .item h4 {
+        font-size: 12px;
+    }
+    .trainers .container .trainer .item p {
+        font-size: 12px;
+    }
+    .trainers .container .trainer .item .icons ul {
+        padding: 10px;
+        gap: 6px;
+    }
+    .trainers .container .trainer .item .icons ul li {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* ---------- Gallery ---------- */
+    .gallary {
+        padding: 20px 0;
+    }
+    .gallary .container {
+        width: 96%;
+    }
+    .gallary .container .photos .col1,
+    .gallary .container .photos .col4 {
+        min-height: 240px;
+        height: 240px;
+    }
+    .gallary .container .photos .col2,
+    .gallary .container .photos .col3,
+    .gallary .container .photos .col5,
+    .gallary .container .photos .col6,
+    .gallary .container .photos .col7 {
+        min-height: 180px;
+        height: 180px;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact {
+        margin: 16px 0;
+    }
+    .contact .container iframe {
+        height: 200px;
+    }
+    .contact .container .way {
+        padding: 16px 0;
+        gap: 18px;
+    }
+    .contact .container .way .item .icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    .contact .container .way .item .icon i {
+        font-size: 14px;
+    }
+    .contact .container .way .item h3 {
+        font-size: 14px;
+    }
+    .contact .container .info {
+        padding: 0 12px;
+    }
+    .contact .container .info .in input {
+        height: 36px;
+        font-size: 13px;
+    }
+    .contact .container .info textarea {
+        height: 120px;
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    /* ---------- Scroll-up button ---------- */
+    .up {
+        width: 36px;
+        height: 36px;
+        right: 8px;
+        bottom: 8px;
+    }
+}
