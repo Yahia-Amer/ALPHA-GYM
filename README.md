@@ -28,13 +28,17 @@ The project focuses on creating a clean fitness website with a structured layout
 
 ### Desktop
 
-![Alpha Gym - Desktop Preview](screenshots/desktop.png)
+![Alpha Gym - Desktop Preview](photo/s1.png)
 
-### Mobile
+### Mobile 
 
-![Alpha Gym - Mobile Preview](screenshots/mobile.png)
+![Alpha Gym - Mobile Preview](photo/s2.png)
 
 ## Project Structure
+
+## Live Demo
+https://yahia-amer.github.io/ALPHA-GYM/
+
 
 ```text
 Alpha-Gym/
