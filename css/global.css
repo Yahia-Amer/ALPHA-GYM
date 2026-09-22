@@ -1,0 +1,25 @@
+:root {
+    --color-primary: #E55556;
+    --color-primary-dark: #C84243;
+    --color-black: #1A1A1A;
+    --color-black-soft: #2B2B2B;
+    --color-gray-dark: #555555;
+    --color-gray: #888888;
+    --color-gray-light: #EEEEEE;
+    --color-bg: #FFFFFF;
+    --color-text: var(--color-black);
+    --color-text-soft: var(--color-gray-dark);
+
+    --font-heading: 'Exo 2', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-body: 'Roboto', 'Inter', system-ui, -apple-system, sans-serif;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.35s ease;
+
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+    --shadow-md: 0 6px 20px rgba(0,0,0,0.08);
+}
