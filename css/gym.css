@@ -89,6 +89,7 @@ button {
     width: 100%;
     position: relative;
     transform: translateY(-30px);
+    z-index: 50;
 
 }
 
